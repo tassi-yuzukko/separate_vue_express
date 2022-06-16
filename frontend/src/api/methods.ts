@@ -5,8 +5,8 @@ export default {
         const item = { text: 'Success!' }
         return Api().post('/test', item)
     },
-    addPosting() {
-        const item = { text: 'Hello', time: getCurrentTime() }
+    addPosting(text: string) {
+        const item = { text: text, time: getCurrentTime() }
         return Api().post('/add', item)
     }
     // 他の処理も追加可能
