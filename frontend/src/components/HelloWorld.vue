@@ -2,7 +2,8 @@
     <div class="hello">
         <h1>{{ msg }}</h1>
         <!-- ごちゃごちゃしていたのを全て消して、ボタンを配置 -->
-        <button @click='post'>click me</button>
+        <button @click='post1'>click me</button>
+        <button @click='post2'>sqlite test</button>
     </div>
 </template>
 
@@ -18,8 +19,12 @@ export default {
     },
     methods: {
         // サーバーから返ってくる値をログに出力したいのでasyncとawaitを行う
-        async post() {
+        async post1() {
             let response = await Methods.testPosting()
+            console.log(response)
+        },
+        async post2() {
+            let response = await Methods.addPosting()
             console.log(response)
         }
     }
