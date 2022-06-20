@@ -8,8 +8,12 @@ export default {
     addPosting(text: string) {
         const item = { text: text, time: getCurrentTime() }
         return Api().post('/add', item)
-    }
+    },
     // 他の処理も追加可能
+    loginPosting(id: string, pass: string) {
+        const item = { id: id, pass: pass }
+        return Api().post('/fnclogin', item)
+    }
 }
 
 //現在時刻取得（yyyy/mm/dd hh:mm:ss）
