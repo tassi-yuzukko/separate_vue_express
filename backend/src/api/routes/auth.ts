@@ -5,7 +5,7 @@ const route = Router();
 export default (app: Router) => {
     app.use('/auth', route);
 
-    route.post('/', function (req: { body: { id: string; pass: string; }; }, res: { send: (arg0: { message: string; }) => void; }, next: any) {
+    route.post('/login', function (req: Request, res: Response, next: NextFunction) {
 
         console.log("/login に来た");
 

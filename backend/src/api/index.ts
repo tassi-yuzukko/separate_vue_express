@@ -1,10 +1,12 @@
 import { Router } from 'express';
-import login from './routes/login';
+import auth from './routes/auth';
+import test from './routes/test';
 
 // guaranteed to get dependencies
 export default () => {
     const app = Router();
-    login(app);
+    auth(app);
+    test(app);
 
     return app
 }
