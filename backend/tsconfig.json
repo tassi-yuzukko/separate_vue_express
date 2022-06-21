@@ -93,5 +93,17 @@
         "skipLibCheck": true, /* Skip type checking all .d.ts files. */
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
-    }
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "tests"
+    ]
 }
