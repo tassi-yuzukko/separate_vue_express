@@ -2,8 +2,8 @@ import { Router, Request, Response, NextFunction } from 'express';
 import path from 'path'
 // データベースを使用
 import sqlite3 from "sqlite3";
-import sqlite3 from "sqlite3";
 import testService from '@/services/testService'
+import TestService from '@/services/testService';
 
 const route = Router();
 
@@ -19,11 +19,12 @@ export default (app: Router) => {
 
     })
 
-    route.post('/add', function (req, res) {
+    route.post('/add', async function (req, res) {
 
         console.log(`/add に来た text:${req.body.text} text:${req.body.time}`);
 
-        testService(req.body.text);
+        const testService = new TestService();
+        await testService.service(req.body.text);
 
         // const currentWorkingDirectory = process.cwd();
         // console.log(`${currentWorkingDirectory}`);

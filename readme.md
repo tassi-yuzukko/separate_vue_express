@@ -14,11 +14,10 @@
 
 ## 実行方法
 ``` bash
-yarn node --loader ts-node/esm index.ts
+npm run serve
 ```
 
-上記については、いろいろ問題が起きたりしたので、以下の症状が起きた場合は https://coffee-nominagara.com/node-index-ts-syntaxerror-cannot-use-import-statement-outside-a-module を参照。
+## ディレクトリ構成
+ベースとなるディレクトリ構成は https://github.com/santiq/bulletproof-nodejs を参考にしている
 
-* `SyntaxError: Cannot use import statement outside a module` というエラーがでる
-* `TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".ts"` というエラーがでる
-* `ReferenceError: exports is not defined in ES module scope` というエラーがでる
+日本語解説サイトはこちら → https://qiita.com/baby-degu/items/f1489dd94becd46ab523

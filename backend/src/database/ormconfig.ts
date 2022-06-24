@@ -1,18 +1,12 @@
-import { ConnectionOptions } from 'typeorm';
+import { DataSource } from 'typeorm';
 import path from 'path'
 import Test from "@/entity/Test";
 
-export const config: ConnectionOptions = {
-    driver: {
-        type: 'sqlite',
-        storage: path.join(process.cwd(), 'test2.db'),
-        database: 'test2'
-    },
-    entities: [
-        // テーブルクラス
-        Test
-    ],
-    autoSchemaSync: true
-};
+const dataSource = new DataSource({
+    type: 'sqlite',
+    database: path.join(process.cwd(), 'test2.db'),
+    entities: [Test],
+    synchronize: true
+})
 
-export default config
+export default dataSource

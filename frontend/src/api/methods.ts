@@ -3,16 +3,16 @@ import Api from './index'
 export default {
     testPosting() {
         const item = { text: 'Success!' }
-        return Api().post('/test', item)
+        return Api().post('/api/test', item)
     },
     addPosting(text: string) {
         const item = { text: text, time: getCurrentTime() }
-        return Api().post('/add', item)
+        return Api().post('/api/test/add', item)
     },
     // 他の処理も追加可能
     loginPosting(id: string, pass: string) {
         const item = { id: id, pass: pass }
-        return Api().post('/fnclogin', item)
+        return Api().post('/api/auth/login', item)
     }
 }
 

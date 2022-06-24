@@ -18,5 +18,9 @@
 * winston
     * ログ出力用ライブラリ
 
+## 実行方法
+```bash
+npm run start
+```
 
 
