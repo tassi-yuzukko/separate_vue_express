@@ -7,17 +7,11 @@
 * npm
 * sqlite3 →インストール方法： https://coffee-nominagara.com/wsl-ubuntu20-04-sqlite3-install
 
-### npm でグローバル（-g）でインストールしておくもの
-* yarn
-* typescript
-* ts-node
+## プロジェクト構成について
+フロントエンドとバックエンドで分けてプロジェクトを作っています。
 
-## 実行方法
-``` bash
-npm run serve
-```
+* [フロントエンド側のreadme](./frontend/README.md)
+* [バックエンド側のreadme](./backend/readme.md)
 
-## ディレクトリ構成
-ベースとなるディレクトリ構成は https://github.com/santiq/bulletproof-nodejs を参考にしている
-
-日本語解説サイトはこちら → https://qiita.com/baby-degu/items/f1489dd94becd46ab523
+両方とも node.js で作っています。  
+言語は typescript を採用しています。
