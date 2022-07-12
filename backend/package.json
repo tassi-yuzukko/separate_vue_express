@@ -20,6 +20,7 @@
         "@types/cookie-parser": "^1.4.3",
         "@types/http-errors": "^1.8.2",
         "@types/morgan": "^1.9.3",
+        "ad-promise": "^1.6.8",
         "body-parser": "^1.20.0",
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",

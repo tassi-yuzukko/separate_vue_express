@@ -10,9 +10,9 @@ export default {
         return Api().post('/api/test/add', item)
     },
     // 他の処理も追加可能
-    loginPosting(id: string, pass: string) {
+    async loginPosting(id: string, pass: string) {
         const item = { id: id, pass: pass }
-        return Api().post('/api/auth/login', item)
+        return await Api().post('/api/auth/login', item)
     }
 }
 

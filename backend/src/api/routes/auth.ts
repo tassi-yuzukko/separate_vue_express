@@ -1,3 +1,4 @@
+import AuthService from '@/services/authService';
 import { Router, Request, Response, NextFunction } from 'express';
 
 const route = Router();
@@ -5,11 +6,13 @@ const route = Router();
 export default (app: Router) => {
     app.use('/auth', route);
 
-    route.post('/login', function (req: Request, res: Response, next: NextFunction) {
+    route.post('/login', async function (req: Request, res: Response, next: NextFunction) {
 
         console.log("/login に来た");
 
-        if (req.body.id == 'test' && req.body.pass == 'test') {
+        const authService = new AuthService();
+
+        if (await authService.executeAuth(req.body.id, req.body.pass)) {
             return res.send({
                 message: 'OK'
             })
